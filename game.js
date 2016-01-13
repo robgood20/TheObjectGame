@@ -3,3 +3,5 @@ function slap(){
     health = health--;
     alert(health);
 }
+
+slap()
