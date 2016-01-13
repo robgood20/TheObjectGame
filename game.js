@@ -1,6 +1,14 @@
 var health = 100;
+var playername = "Player 1";
+var playerhits = 0;
+
 function slap(){
     health = health-1;
+    updateHealth()
+}
+
+function hits(){
+    health = health+1;
     updateHealth()
 }
 
