@@ -4,12 +4,12 @@ var playerHits = 0;
 
 var update = document.getElementById('playerHealth');
 function updateHealth(){
-    update.innerText = health.toString()    
+    update.innerText = playerHealth.toString()    
 }
 
 var displayHits = document.getElementById('playerHits');
 function updateHits(){
-    displayHits.innerText = hits.toString()    
+    displayHits.innerText = playerHits.toString()    
 }
 
 var displayName = document.getElementById('playerName');
@@ -22,18 +22,21 @@ function slap(){
     playerHealth = playerHealth-1;
     playerHits = playerHits+1;
     updateHealth()
+    updateHits()
 }
 
 function punch(){
     playerHealth = playerHealth-5;
     playerHits = playerHits+1;
     updateHealth()
+    updateHits()
 }
 
 function kick(){
     playerHealth = playerHealth-10;
     playerHits = playerHits+1;
     updateHealth() 
+    updateHits()
 }
     
 updateName()
