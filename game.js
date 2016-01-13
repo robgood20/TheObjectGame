@@ -1,38 +1,38 @@
-var health = 100;
-var playername = "Player 1";
-var hits = 0;
+var playerHealth = 100;
+var playerName = "Player 1";
+var playerHits = 0;
 
 var update = document.getElementById('playerHealth');
 function updateHealth(){
     update.innerText = health.toString()    
 }
 
-var update = document.getElementById('playerHits');
+var displayHits = document.getElementById('playerHits');
 function updateHits(){
-    update.innerText = hits.toString()    
+    displayHits.innerText = hits.toString()    
 }
 
-var update = document.getElementById('playerName');
+var displayName = document.getElementById('playerName');
 function updateName(){
-    update.innerText = health.toString()    
+    displayName.innerText = playerName.toString()    
 }
 
 
 function slap(){
-    health = health-1;
-    hits = hits+1;
+    playerHealth = playerHealth-1;
+    playerHits = playerHits+1;
     updateHealth()
 }
 
 function punch(){
-    health = health-5;
-    hits = hits+1;
+    playerHealth = playerHealth-5;
+    playerHits = playerHits+1;
     updateHealth()
 }
 
 function kick(){
-    health = health-10;
-    hits = hits+1;
+    playerHealth = playerHealth-10;
+    playerHits = playerHits+1;
     updateHealth() 
 }
     
