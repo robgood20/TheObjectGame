@@ -1,9 +1,19 @@
 var health = 100;
 var playername = "Player 1";
-var playerhits = 0;
+var hits = 0;
 
-var update = document.getElementById('playerhealth');
+var update = document.getElementById('playerHealth');
 function updateHealth(){
+    update.innerText = health.toString()    
+}
+
+var update = document.getElementById('playerHits');
+function updateHits(){
+    update.innerText = hits.toString()    
+}
+
+var update = document.getElementById('playerName');
+function updateName(){
     update.innerText = health.toString()    
 }
 
