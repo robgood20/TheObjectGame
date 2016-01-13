@@ -9,4 +9,27 @@ function updateHealth(){
     update.innerText = health.toString()
     
 }
+
+function punch(){
+    health = health-5;
+    updateHealth()
+}
+
+var update = document.getElementById('playerhealth');
+function updateHealth(){
+    update.innerText = health.toString()
+    
+}
+
+function kick(){
+    health = health-10;
+    updateHealth()
+}
+
+var update = document.getElementById('playerhealth');
+function updateHealth(){
+    update.innerText = health.toString()
+    
+}
+
 updateHealth()
