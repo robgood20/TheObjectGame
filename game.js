@@ -4,4 +4,3 @@ function slap(){
     alert(health);
 }
 
-slap()
