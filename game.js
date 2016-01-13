@@ -17,7 +17,7 @@ function punch(){
 
 function kick(){
     health = health-10;
-    updateHealth()
+    updateHealth() 
 }
     
 
