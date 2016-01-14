@@ -22,13 +22,13 @@ function kick(){
     updateAll();
 }
 
-//var sheild/
+//var sheild = new modifier('Simba', 'M', 'Red')//
 
 function Item(name, modifier, description){
     this.name = name;
     this.modifier = modifier;
     this.description = description;
-    this.draw = function(){
+    this.draw = function(){}
     
 }
 
