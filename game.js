@@ -1,49 +1,38 @@
-var playerHealth = 100;
-var playerName = "Player 1";
-var playerHits = 0;
+var player={
+    playerHealth : 100,
+    playerName : "Player 1",
+    playerHits : 0,
+}
 
-var update = document.getElementById('playerHealth');
-function updateHealth(){
-    if("[PlayerHealth]" <= 0){
+function slap(){
+    player.playerHealth = player.playerHealth-1;
+    player.playerHits = player.playerHits+1;
+    updateAll();
+}
+
+function punch(){
+    player.playerHealth = player.playerHealth-5;
+    player.playerHits = player.playerHits+1;
+    updateAll();
+}
+
+function kick(){
+    player.playerHealth = player.playerHealth-10;
+    player.playerHits = player.playerHits+1;
+    updateAll();
+}
+
+function updateAll(){    
+    var update = document.getElementById('playerHealth');
+        update.innerText = player.playerHealth.toString();
+        var displayHits = document.getElementById('playerHits');
+        displayHits.innerText = player.playerHits.toString();
+        var displayName = document.getElementById('playerName');
+        displayName.innerText = player.playerName.toString();
+    if (player.playerHealth <= 0){
          document.getElementById("player-panel").classList.add("panel-danger")
     }else{
          document.getElementById("player-panel").classList.remove("panel-danger")
     }
-    update.innerText = playerHealth.toString()    
 }
-
-var displayHits = document.getElementById('playerHits');
-function updateHits(){
-    displayHits.innerText = playerHits.toString()    
-}
-
-var displayName = document.getElementById('playerName');
-function updateName(){
-    displayName.innerText = playerName.toString()    
-}
-
-
-function slap(){
-    playerHealth = playerHealth-1;
-    playerHits = playerHits+1;
-    updateHealth()
-    updateHits()
-}
-
-function punch(){
-    playerHealth = playerHealth-5;
-    playerHits = playerHits+1;
-    updateHealth()
-    updateHits()
-}
-
-function kick(){
-    playerHealth = playerHealth-10;
-    playerHits = playerHits+1;
-    updateHealth() 
-    updateHits()
-}
-    
-updateName()
-updateHits()
-updateHealth()
+updateAll();
