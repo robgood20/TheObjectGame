@@ -1,3 +1,9 @@
+var itemObject = {
+    shield:new Item("Shield",0.3,"This is an shield!"),
+    armor:new Item("Armor",0.5,"This armor's made of peanut butter"),
+    helmet:new Item("Helmet",1,"No more face shots!"),
+}
+
 var player={
     playerHealth : 100,
     playerName : "Player 1",
@@ -33,11 +39,7 @@ function Item(name, modifier, description){
     
 }
 
-var itemObject = {
-    shield:new Item("Shield",0.3,"This is an shield!"),
-    armor:new Item("Armor",0.5,"This armor's made of peanut butter"),
-    helmet:new Item("Helmet",1,"No more face shots!"),
-}
+
 
 function updateAll(){    
     var update = document.getElementById('playerHealth');
