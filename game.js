@@ -4,6 +4,11 @@ var playerHits = 0;
 
 var update = document.getElementById('playerHealth');
 function updateHealth(){
+    if("[PlayerHealth]" <= 0){
+         document.getElementById("player-panel").classList.add("panel-danger")
+    }else{
+         document.getElementById("player-panel").classList.remove("panel-danger")
+    }
     update.innerText = playerHealth.toString()    
 }
 
