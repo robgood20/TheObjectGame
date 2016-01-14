@@ -2,7 +2,7 @@ var player={
     playerHealth : 100,
     playerName : "Player 1",
     playerHits : 0,
-    items:[itemObject.shield]
+    items:[itemObject.shield, itemObject.armor, itemObject.helmet]
 }
 
 function slap(){
