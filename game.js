@@ -22,6 +22,16 @@ function kick(){
     updateAll();
 }
 
+//var sheild/
+
+function Item(name, modifier, description){
+    this.name = name;
+    this.modifier = modifier;
+    this.description = description;
+    this.draw = function(){
+    
+}
+
 function updateAll(){    
     var update = document.getElementById('playerHealth');
         update.innerText = player.playerHealth.toString();
