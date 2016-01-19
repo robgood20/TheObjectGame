@@ -4,6 +4,14 @@ var itemObject = {
     helmet:new Item("Helmet",1,"No more face shots!"),
 }
 
+function addMods(){}
+    var runningTotal(){
+        for(i=0; i<itemObject.length; i++){
+            runningTotal+=itemObject.modifier;
+        }var currentItemModifier=runningTotal    
+    }return currentItemModifier
+}
+
 var player={
     playerHealth : 100,
     playerName : "Player 1",
