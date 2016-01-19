@@ -1,16 +1,17 @@
 var itemObject = {
     shield:new Item("Shield",0.3,"This is an shield!"),
     armor:new Item("Armor",0.5,"This armor's made of peanut butter"),
-    helmet:new Item("Helmet",1,"No more face shots!"),
+    helmet:new Item("Helmet",0.9,"No more face shots!"),
 }
 
-function addMods(){}
-    var runningTotal(){
-        for(i=0; i<itemObject.length; i++){
-            runningTotal+=itemObject.modifier;
-        }var currentItemModifier=runningTotal    
-    }return currentItemModifier
-}
+
+function addMods(){
+    var runningTotal = 0;
+        for(var key in itemObject){
+            runningTotal+=itemObject[key].modifier;
+        }    
+        return runningTotal;
+    }
 
 var player={
     playerHealth : 100,
@@ -20,19 +21,19 @@ var player={
 }
 
 function slap(){
-    player.playerHealth = player.playerHealth-1;
+    player.playerHealth = player.playerHealth - (1 * addMods());
     player.playerHits = player.playerHits+1;
     updateAll();
 }
 
 function punch(){
-    player.playerHealth = player.playerHealth-5;
+    player.playerHealth = player.playerHealth - (5 * addMods());
     player.playerHits = player.playerHits+1;
     updateAll();
 }
 
 function kick(){
-    player.playerHealth = player.playerHealth-10;
+    player.playerHealth = player.playerHealth - (10 * addMods());
     player.playerHits = player.playerHits+1;
     updateAll();
 }
