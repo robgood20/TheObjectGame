@@ -1,7 +1,7 @@
 var itemObject = {
     shield:new Item("Shield",0.3,"This is an shield!"),
     armor:new Item("Armor",0.5,"This armor's made of peanut butter"),
-    helmet:new Item("Helmet",0.9,"No more face  shots!"),
+    helmet:new Item("Helmet",0.9,"No more face shots!"),
 }
 
 
